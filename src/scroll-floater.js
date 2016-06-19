@@ -125,4 +125,13 @@ _.prototype.destroy = function() {
 };
 
 
+/**
+ * Recalcs positioning and sizes.
+ * @export
+ */
+_.prototype.update = function() {
+  this.floater_.update();
+};
+
+
 });  // goog.scope
