@@ -27,6 +27,20 @@ altipla.ScrollFloater = function(element, opt_offset, opt_container) {
    */
   this.element_ = element;
 
+  /**
+   * Callback when the floater floats.
+   * @type {Function}
+   * @private
+   */
+  this.onFloatCallback_ = null;
+
+  /**
+   * Callback when the floater docks.
+   * @type {Function}
+   * @private
+   */
+  this.onDockCallback_ = null;
+
   goog.dom.classlist.add(element, altipla.ScrollFloater.CLASS_NAME);
 
   /**
@@ -92,6 +106,9 @@ _.FLOATING_CLASS_NAME = 'scroll-floater-floating';
 _.prototype.onFloat_ = function() {
   goog.dom.classlist.addRemove(this.element_, _.DOCKED_CLASS_NAME,
       _.FLOATING_CLASS_NAME);
+  if (this.onFloatCallback_) {
+    this.onFloatCallback_();
+  }
 };
 
 
@@ -102,6 +119,9 @@ _.prototype.onFloat_ = function() {
 _.prototype.onDock_ = function() {
   goog.dom.classlist.addRemove(this.element_, _.FLOATING_CLASS_NAME,
       _.DOCKED_CLASS_NAME);
+  if (this.onDockCallback_) {
+    this.onDockCallback_();
+  }
 };
 
 
@@ -131,6 +151,24 @@ _.prototype.destroy = function() {
  */
 _.prototype.update = function() {
   this.floater_.update();
+};
+
+
+/**
+ * Sets the callback to use when the floater floats.
+ * @param {Function} callback Function to call.
+ */
+_.prototype.setOnFloatCallback = function(callback) {
+  this.onFloatCallback_ = callback;
+};
+
+
+/**
+ * Sets the callback to use when the floater docks.
+ * @param {Function} callback Function to call.
+ */
+_.prototype.setOnDockCallback = function(callback) {
+  this.onDockCallback_ = callback;
 };
 
 

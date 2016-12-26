@@ -5,7 +5,7 @@ set -eu
 rm -rf dist
 mkdir dist
 
-java -jar vendor/closure-compiler/build/compiler.jar \
+java -jar vendor/closure-compiler/target/closure-compiler-1.0-SNAPSHOT.jar \
     --js_output_file dist/scroll-floater.min.js \
     --only_closure_dependencies \
     --language_in ECMASCRIPT5_STRICT \
