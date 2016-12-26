@@ -157,6 +157,7 @@ _.prototype.update = function() {
 /**
  * Sets the callback to use when the floater floats.
  * @param {Function} callback Function to call.
+ * @export
  */
 _.prototype.setOnFloatCallback = function(callback) {
   this.onFloatCallback_ = callback;
@@ -166,6 +167,7 @@ _.prototype.setOnFloatCallback = function(callback) {
 /**
  * Sets the callback to use when the floater docks.
  * @param {Function} callback Function to call.
+ * @export
  */
 _.prototype.setOnDockCallback = function(callback) {
   this.onDockCallback_ = callback;
