@@ -174,4 +174,14 @@ _.prototype.setOnDockCallback = function(callback) {
 };
 
 
+/**
+ * Set the offset from the top edge of the browser to leave room to other floaters.
+ * @param {number} offset Offset in pixels.
+ * @export
+ */
+_.prototype.setOffset = function(offset) {
+  this.floater_.setViewportTopOffset(offset);
+};
+
+
 });  // goog.scope
