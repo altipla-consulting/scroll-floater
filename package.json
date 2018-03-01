@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/altipla-consulting/scroll-floater.git"
   },
+  "main": "dist/scroll-floater.min.js",
   "author": "Altipla Consulting",
   "homepage": "https://github.com/altipla-consulting/scroll-floater",
   "devDependencies": {
