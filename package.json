@@ -1,5 +1,5 @@
 {
-  "name": "scroll-floater",
+  "name": "@altipla/scroll-floater",
   "version": "1.1.0",
   "description": "Float an element when the scroll touches it.",
   "repository": {
