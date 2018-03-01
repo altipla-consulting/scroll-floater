@@ -4,7 +4,7 @@
 Float an element when the scroll touches it.
 
 
-### Docs
+## Docs
 
 Simple usage:
 
