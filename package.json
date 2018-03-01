@@ -1,8 +1,7 @@
 {
   "name": "scroll-floater",
   "version": "1.1.0",
-  "description": "Flota un elemento cuando llega el scroll.",
-  "private": true,
+  "description": "Float an element when the scroll touches it.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/altipla-consulting/scroll-floater.git"
