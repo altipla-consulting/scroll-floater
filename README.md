@@ -20,3 +20,13 @@ let floater = new altipla.ScrollFloater(document.querySelector('#foo'), 0, docum
 ```
 
 Other options and methods see [the source](src/scroll-floater.js) docs directly.
+
+
+## Contributing
+
+You can make pull requests or create issues in GitHub.
+
+
+## License
+
+[MIT License](LICENSE)

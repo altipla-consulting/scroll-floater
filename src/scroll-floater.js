@@ -15,11 +15,16 @@ goog.require('goog.events');
  * room to other floaters.
  * @param {Element=} opt_container Container element that will limit the
  * space the floater will move.
+ * @param {Element=} opt_parentElement Where to attach the element when it's
+ *     floating.  Default is the document body.  If the floating element
+ *     contains form inputs, it will be necessary to attach it to the
+ *     corresponding form element, or to an element in the DOM subtree under
+ *     the form element.
  * @constructor
  * @struct
  * @export
  */
-altipla.ScrollFloater = function(element, opt_offset, opt_container) {
+altipla.ScrollFloater = function(element, opt_offset, opt_container, opt_parentElement) {
   /**
    * Element to float.
    * @type {Element}
@@ -48,7 +53,7 @@ altipla.ScrollFloater = function(element, opt_offset, opt_container) {
    * @type {goog.ui.ScrollFloater}
    * @private
    */
-  this.floater_ = new goog.ui.ScrollFloater();
+  this.floater_ = new goog.ui.ScrollFloater(opt_parentElement);
   if (opt_offset) {
     this.floater_.setViewportTopOffset(opt_offset);
   }
