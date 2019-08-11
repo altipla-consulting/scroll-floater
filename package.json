@@ -9,8 +9,6 @@
   "main": "dist/scroll-floater.min.js",
   "author": "Altipla Consulting",
   "homepage": "https://github.com/altipla-consulting/scroll-floater",
-  "devDependencies": {
-  },
-  "dependencies": {
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
